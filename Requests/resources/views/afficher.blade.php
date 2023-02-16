@@ -421,7 +421,8 @@
                                 </path>
                             </svg>
                             <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs"
-                                    class="underline text-gray-900 dark:text-white">Laravel Requests
+                                    class="underline text-gray-900 dark:text-white">Code Example.
+
                                 </a></div>
                         </div>
 
@@ -431,34 +432,29 @@
 
                         <div class="ml-12">
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                Laravel has wonderful, thorough documentation covering every aspect of the framework.
-                                Whether you are new to the framework or have previous experience with Laravel, we
-                                recommend reading all of the documentation from beginning to end.
-
-                            </div>
-
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25">
-                                    </path>
-                                </svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs"
-                                        class="underline text-gray-900 dark:text-white">Laravel Requests
-                                    </a></div>
-                            </div>
-                            {{-- image modification --}}
-                            {{-- <div class="ml-12"> --}}
-                            <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <div class="">
-                                    <img class="object-fill  rounded-lg bg-sky-300 ..."
-                                    src="{{ url('/images/request-code.png') }}">
-                                  
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    <div class="">
+                                        <img class="object-fill  rounded-lg bg-sky-300 ..." 
+                                         src='<?php echo asset("/images/$img.png")?>'>
+                                      
+                                    </div>
+    
                                 </div>
 
                             </div>
-                            {{-- </div> --}}
+
+                           
+
+
+                            <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                <div class="">
+
+
+
+                                </div>
+
+                            </div>
+
                         </div>
 
 
@@ -479,163 +475,15 @@
                             </svg>
 
                             <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com"
-                                    class="underline text-gray-900 dark:text-white">Formulaire</a>
+                                    class="underline text-gray-900 dark:text-white">Résultat</a>
                             </div>
                         </div>
 
                         <div class="ml-12">
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
 
-                                <div>
-                                    <form class="w-full max-w-lg" method="POST" action="{{ route('requete') }}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="flex flex-wrap -mx-3 mb-6">
-                                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                                <label
-                                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                                    for="grid-first-name">
-                                                    Nom
-                                                </label>
-                                                <input
-                                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                                    id="grid-first-name" type="text" placeholder="Jane"
-                                                    name="nom">
-                                                <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-                                            </div>
-                                            <div class="w-full md:w-1/2 px-3">
-                                                <label
-                                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                                    for="grid-last-name">
-                                                    Prenom
-                                                </label>
-                                                <input
-                                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                                    id="grid-last-name" type="text" placeholder="Doe"
-                                                    name="prenom">
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-wrap -mx-3 mb-6">
-                                            <div class="w-full px-3">
-                                                <label
-                                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                                    for="grid-password">
-                                                    Mail
-                                                </label>
-                                                <input
-                                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                                    id="grid-password" type="" placeholder="mail"
-                                                    name="mail">
-
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-wrap -mx-3 mb-6 ">
-                                            <div class="w-full px-3">
-                                                <label
-                                                    class=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                                    for="grid-city">
-                                                    Photo
-                                                </label>
-                                                <input
-                                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                                    id="grid-city" type="file" name="fichier">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="flex flex-wrap -mx-3 mb-2">
-                                            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                <label
-                                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                                    for="grid-state">
-                                                    Manipulation des requêtes http
-                                                </label>
-                                                <div class="relative">
-                                                    <select
-                                                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                                        id="grid-state" name="requete">
-                                                        <optgroup label="Interaction avec les requêtes">
-                                                            <option value="input">Accéder à la demande</option>
-                                                            <option value="injection-dependance">Paramètres d'injection de dépendance et de routage
-                                                            </option>
-                                                            <option value="chemin">Récupération du chemin de la requête</option>
-                                                            <option value=" inspecter">Inspecter le chemin/la route de la demande</option>
-                                                            <option value=" url">Récupération de l'URL de la requête</option>
-                                                            <option value=" hote">Récupération de l'hôte de requête</option>
-                                                            <option value="  method">Récupération de la méthode Request</option>
-                                                            <option value=" en-tete">En-têtes de demande</option>
-                                                            <option value=" ip">Demander l'adresse IP</option>
-                                                            <option value="negociation">Négociation de contenu</option>
-                                                            <option  value="psr-7">Demandes PSR-7</option>
-
-                                                        </optgroup>
-                                                        <optgroup label="Interation avec les inputs">
-                                                            <option value="all">Récupération de toutes les données d'entrée</option>
-                                                            <option value="une">Récupération d'une valeur d'entrée</option>
-                                                            <option value="chaine">Récupération de l'entrée de la chaîne de requête
-                                                            </option>
-                                                            <option value="json">Récupération des valeurs d'entrée JSON</option>
-                                                            <option value="string">Récupération de valeurs d'entrée stringables
-                                                            </option>
-                                                            <option value="bool">Récupération des valeurs d'entrée booléennes
-                                                            </option>
-                                                            <option value="date">Récupération des valeurs d'entrée de date</option>
-                                                            <option value="enum">Récupération des valeurs d'entrée Enum</option>
-                                                            <option>Récupération de l'entrée via les propriétés
-                                                                dynamiques</option>
-                                                            <option value="partie">Récupération d'une partie des données d'entrée
-                                                            </option>
-                                                            <option value="present">Déterminer si l'entrée est présente</option>
-                                                            <option value="fusion">Fusion d'entrées supplémentaires</option>
-                                                            <option>Ancienne entrée</option>
-                                                            <option>Entrée clignotante à la session</option>
-                                                            <option>Entrée clignotante puis redirection</option>
-                                                            <option>Récupération de l'ancienne entrée</option>
-                                                            <option>Récupération des cookies à partir des demandes
-                                                            </option>
-                                                            <option>Ajustement et normalisation d'entrée</option>
-
-                                                        </optgroup>
-                                                        <optgroup label="Interaction avec les fichiers">
-                                                            <option>Récupération des fichiers téléchargés</option>
-                                                            <option>Validation des téléchargements réussis</option>
-                                                            <option>Chemins de fichiers et extensions</option>
-                                                            <option>Stockage des fichiers téléchargés</option>
-                                                            <option>Chemins de fichiers et extensions</option>
-                                                            <option>Chemins de fichiers et extensions</option>
-                                                        </optgroup>
-                                                    </select>
-                                                    <div
-                                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                        <svg class="fill-current h-4 w-4"
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                            <path
-                                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                <label
-                                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-6"
-                                                    for="grid-zip">
-
-                                                </label>
-
-
-                                                <button
-                                                    class=" block w-full bg-red-500 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="submit">
-                                                    Send
-                                                </button>
-
-                                            </div>
-
-                                        </div>
-                                    </form>
+                                <div class="font-bold text-xl   ">
+                                {{$value}}
                                 </div>
                             </div>
                         </div>
@@ -676,6 +524,9 @@
 
 
     <div></div>
+
+
+
 
 
 

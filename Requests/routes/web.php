@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\UserInformations;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/{requete}', function ($requete) {
+//     // return view('afficher');
+//     return $requete; 
+// });
+
+Route::post('/requete', [UserInformations::class, 'show'])->name('requete');
+
+// 1 
+// Route::post('/save', function () {
+//     return view('welcome');
+// })->name('save');
+
+
+//2 
+
+Route::post('/save', [UserInformations::class, 'store'])->name('save');
+
+

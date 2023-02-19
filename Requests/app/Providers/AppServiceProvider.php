@@ -24,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        // $request = request();
+        // abort_if($request->getHost() === 'laravel.test:8000', 403);
     }
 }
